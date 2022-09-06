@@ -1,0 +1,21 @@
+print("****ASSINGMENT-01****")
+grpA={"Sami","Mg","Mukesh","Advit"}                 #student who play cricket
+grpB={"Mg","Mukesh","Aatir","Hashir","zaid"}        #student who play badminton
+grpc={"Sami","Zaid","Aatir","Advit"}                #student who play football
+print("Student wo play cricket",grpA)
+print("student who play badminton",grpB)
+print("student who play football",grpc)
+l1=grpA.intersection(grpB)
+print("1. List of students who play both cricket and badminton:: ",l1)
+l2=grpB.union(grpA)
+l3=grpB.intersection(grpA)
+l4=l2.difference(l3)
+print("2. List of students who play either cricket or badminton but not both:: ",l4)
+l5=grpc.intersection(grpB)
+l6=grpc.intersection(grpA)
+l7=l5.union(l6)
+l8=grpc.difference(l7)
+print("3. Number of students who play neither cricket nor badminton:: ",l8)
+l9=grpc.intersection(grpA)
+lA=l9.difference(grpB)
+print("4. Number of students who play cricket and football but not badminton:: ",lA)
