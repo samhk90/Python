@@ -19,7 +19,6 @@ if m3==[]:
 else:
  for j in range(0,len(m3)):
    sum=sum+m3[j]
-   break
  avg=sum/n
  print("1.Avg score of class:: ",avg)
  print("2.Highest marks in class:: ",max(m3))
