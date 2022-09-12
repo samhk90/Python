@@ -1,21 +1,36 @@
 print("****ASSINGMENT-01****")
-grpA={"Sami","Mg","Mukesh","Advit"}                 #student who play cricket
-grpB={"Mg","Mukesh","Aatir","Hashir","zaid"}        #student who play badminton
-grpc={"Sami","Zaid","Aatir","Advit"}                #student who play football
+n=int(input("Enter no. of students for cricket:: "))
+grpA=[]
+grpB=[]
+grpc=[]
+for i in range(0,n):
+  m=(input("Enter name of students:: "))
+  grpA.append(m)
+z=int(input("Enter no. of students for Badminton:: "))
+for i in range(0,z):
+  k=(input("Enter name of students for badminton:: "))
+  grpB.append(k)
+p=int(input("Enter no. of students for Football:: "))
+for i in range(0,p):
+  v=(input("Enter name of students for football:: "))
+  grpc.append(v)
 print("Student wo play cricket",grpA)
 print("student who play badminton",grpB)
 print("student who play football",grpc)
-l1=grpA.intersection(grpB)
+l4=[]
+l1=[]
+l5=[]
+l6=[]
+for i in range(0,len(grpA)):
+  for j in range(0,len(grpB)):
+    if grpB[j]==grpA[i]:
+      l1.append(grpB[j])
+l4=grpA+grpB
+l7=grpA+grpc
+l5=list(set(l4)-set(l1))
+l6=list(set(grpc)-set(l4))
+l8=list(set(l7)-set(grpB))
 print("1. List of students who play both cricket and badminton:: ",l1)
-l2=grpB.union(grpA)
-l3=grpB.intersection(grpA)
-l4=l2.difference(l3)
-print("2. List of students who play either cricket or badminton but not both:: ",l4)
-l5=grpc.intersection(grpB)
-l6=grpc.intersection(grpA)
-l7=l5.union(l6)
-l8=grpc.difference(l7)
-print("3. Number of students who play neither cricket nor badminton:: ",l8)
-l9=grpc.intersection(grpA)
-lA=l9.difference(grpB)
-print("4. Number of students who play cricket and football but not badminton:: ",lA)
+print("2. List of students who play either cricket or badminton but not both:: ",l5)
+print("3. Number of students who play neither cricket nor badminton:: ",l6)
+print("4. Number of students who play cricket and football but not badminton:: ",l8)
