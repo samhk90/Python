@@ -19,16 +19,17 @@ if m3==[]:
 else:
  for j in range(0,len(m3)):
    sum=sum+m3[j]
- avg=sum/n
- print("1.Avg score of class:: ",avg)
- print("2.Highest marks in class:: ",max(m3))
- print("2.Lowest marks in class:: ",min(m3))
- for i in range(0, len(m3)):
-  for j in range(i+1, len(m3)):
-   if(m3[i] == m3[j]):
-    print("4.Mark with highest frequency:: ",marks[j])
-    break
 for i in marks:
    if i=="Ab":
      count=count+1
+z=n-count
+avg=sum/z
+print("1.Avg score of class:: ",avg)
+print("2.Highest marks in class:: ",max(m3))
+print("2.Lowest marks in class:: ",min(m3))
 print("3.Number of students who was absent:: ",count)
+for i in range(0, len(m3)):
+ for j in range(i+1, len(m3)):
+  if(m3[i] == m3[j]):
+   print("4.Mark with highest frequency:: ",m3[j])
+   break
