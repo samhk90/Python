@@ -17,20 +17,43 @@ for i in range(0,p):
 print("Student wo play cricket",grpA)
 print("student who play badminton",grpB)
 print("student who play football",grpc)
-l4=[]
 l1=[]
+l2=[]
+l3=[]
 l5=[]
-l6=[]
+l4=grpA+grpc
 for i in range(0,len(grpA)):
   for j in range(0,len(grpB)):
     if grpB[j]==grpA[i]:
       l1.append(grpB[j])
-l4=grpA+grpB
-l7=grpA+grpc
-l5=list(set(l4)-set(l1))
-l6=list(set(grpc)-set(l4))
-l8=list(set(l7)-set(grpB))
+for i in range(0,len(grpA)):
+  for j in range(0,len(grpc)):
+    if grpc[j]==grpA[i]:
+      l5.append(grpc[j])
+l2=grpA+grpB
+for i in l1:
+ l2.remove(i)
+l3=grpc
+for i in grpc:
+  for j in grpA:
+    if i==j:
+      l3.remove(j)
+for i in grpc:
+  for j in grpB:
+    if i==j:
+      l3.remove(j)
+for k in grpA:
+  for s in grpB:
+    if s==k:
+     l4.remove(s)
+for i in l4:
+  for j in grpB:
+    if i==j:
+      l4.remove(j)
+
+for i in l5:
+ l4.remove(i)
 print("1. List of students who play both cricket and badminton:: ",l1)
-print("2. List of students who play either cricket or badminton but not both:: ",l5)
-print("3. Number of students who play neither cricket nor badminton:: ",l6)
-print("4. Number of students who play cricket and football but not badminton:: ",l8)
+print("2. List of students who play either cricket or badminton but not both:: ",l2)
+print("3. Number of students who play neither cricket nor badminton:: ",l3)
+print("4. Number of students who play cricket and football but not badminton:: ",l4)
