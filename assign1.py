@@ -33,6 +33,7 @@ for i in range(0,len(grpA)):
 l2=grpA+grpB
 for i in l1:
  l2.remove(i)
+ l2.remove(i)
 l3=grpc
 for i in grpc:
   for j in grpA:
