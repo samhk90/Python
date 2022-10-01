@@ -55,10 +55,11 @@ for i in m4:
       count+=1
       Frequency[i]=count
   count=0
+high=0
 print(Frequency)
 for i in Frequency.values(): #for max values
   if i>high:
     high=i
 for i in Frequency:
   if Frequency[i]==high:
-    print("Highest Frequency is",i,"and frequency is",Frequency[i])
+    print("4.Highest Frequency is",i,"and frequency is",Frequency[i])
